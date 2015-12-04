@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<root> 
+	<student id="1"> 
+		<stu_name>张三</stu_name>  
+		<stu_age>21</stu_age>  
+		<stu_sex>女</stu_sex>  
+		<stu_content><![CDATA[这是我的描述内容!@#$%^&*()+_)}{}”:L]]></stu_content> 
+	</student>  
+	<!-- 这是注释节点 -->  
+	<student id="2"> 
+		<stu_name>这是更新过的值_1376313340828</stu_name>  
+		<stu_age>22</stu_age>  
+		<stu_sex>女</stu_sex>  
+		<!-- 用于写一些特殊的字符 防止与XML的其他标签引起冲突
+		     CDATA节点的作用具体是：用于把整段文本解释为纯字符数据而不是标记的情况
+		               常常在CDATA中写SQl语句，使SQL语句脱离程序的绑定(Ibatis框架)
+		-->  
+		<stu_content><![CDATA[修改过后的内空1376313340828]]></stu_content>
+	</student>  
+	<student id="3"> 
+		<stu_name>XXX</stu_name>  
+		<stu_age>22</stu_age>  
+		<stu_sex>女</stu_sex>  
+		<stu_content><![CDATA[这是我的描述内容]]></stu_content> 
+	</student>  
+	<student id="4"> 
+		<stu_name>YYY</stu_name>  
+		<stu_age>22</stu_age>  
+		<stu_sex>女</stu_sex>  
+		<stu_content><![CDATA[这是我的描述内容]]></stu_content> 
+	</student>  
+	<student id="5"> 
+		<stu_name>admin</stu_name>  
+		<stu_age>22</stu_age>  
+		<stu_sex>男</stu_sex>  
+		<stu_content><![CDATA[这是我的描述内容]]></stu_content> 
+	</student>  
+	<student id="6"> 
+		<stu_name>张三</stu_name>  
+		<stu_age>22</stu_age>  
+		<stu_sex>男</stu_sex>  
+		<stu_content><![CDATA[这是我的描述内容]]></stu_content> 
+	</student>  
+	<student id="7"> 
+		<stu_name>李四</stu_name>  
+		<stu_age>22</stu_age>  
+		<stu_sex>女</stu_sex>  
+		<stu_content><![CDATA[这是我的描述内容]]></stu_content> 
+	</student>  
+	<student id="8"> 
+		<stu_name>王五</stu_name>  
+		<stu_age>22</stu_age>  
+		<stu_sex>男</stu_sex>  
+		<stu_content><![CDATA[这是我的描述内容]]></stu_content> 
+	</student>  
+	<aa>aa</aa>  
+	<newElement_1376311184890> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376311184890>  
+	<newElement_1376312101472> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376312101472>  
+	<newElement_1376312340152> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376312340152>  
+	<newElement_1376312499017> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376312499017>  
+	<newElement_1376312541369> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376312541369>  
+	<newElement_1376312634001> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376312634001>  
+	<newElement_1376313300985> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376313300985>  
+	<newElement_1376313340794> 
+		<name>the new element</name>  
+		<content><![CDATA[this is CDATA's text]]></content> 
+	</newElement_1376313340794> 
+</root>
