@@ -36,6 +36,7 @@ public class ServerThread extends Thread {
 				System.out.println("我是服务器，客户端说：" + info);
 			}
 			socket.shutdownInput();// 关闭输入流
+			
 			// 获取输出流，响应客户端的请求
 			os = socket.getOutputStream();
 			pw = new PrintWriter(os);

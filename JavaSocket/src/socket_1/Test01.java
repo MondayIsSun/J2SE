@@ -19,8 +19,8 @@ public class Test01 {
 		System.out.println(address);// 直接输出InetAddress对象
 
 		// 根据机器名获取InetAddress实例
-		// InetAddress address2=InetAddress.getByName("laurenyang");
-		InetAddress address2 = InetAddress.getByName("1.1.1.10");
+		// InetAddress address2=InetAddress.getByName("ND--20150817QCR");
+		InetAddress address2 = InetAddress.getByName("192.168.251.66");
 		System.out.println("计算名：" + address2.getHostName());
 		System.out.println("IP地址：" + address2.getHostAddress());
 	}
