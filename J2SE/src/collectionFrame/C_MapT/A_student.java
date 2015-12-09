@@ -17,6 +17,4 @@ public class A_student {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
 }

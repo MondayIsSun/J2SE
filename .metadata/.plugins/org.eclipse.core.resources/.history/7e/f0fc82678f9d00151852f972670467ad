@@ -1,0 +1,70 @@
+package collectionFrame.A_SetT;
+
+import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class D_CopyOnWriteArraySetTest {
+
+	public static void main(String[] args) {
+
+		A_student student_1 = new A_student();
+		student_1.setId(1);
+		student_1.setName("Alice");
+		A_student student_2 = new A_student();
+		student_2.setId(2);
+		student_2.setName("Blice");
+		A_student student_3 = new A_student();
+		student_3.setId(3);
+		student_3.setName("Clice");
+		A_student student_4 = new A_student();
+		student_4.setId(4);
+		student_4.setName("Dlice");
+		A_student student_5 = new A_student();
+		student_5.setId(1);
+		student_5.setName("Alice");
+
+		Set<A_student> set = new CopyOnWriteArraySet<A_student>();
+
+		set.add(student_4);
+		set.add(student_2);
+		set.add(student_5);
+		set.add(student_1);
+		set.add(student_3);
+		set.add(student_3);
+
+		System.out.println(set.size());
+		System.out.println(set);
+
+		Iterator<A_student> iterator = set.iterator();
+
+		while (iterator.hasNext()) {
+
+			A_student stu = (A_student) iterator.next();
+
+			if (stu.getName().equals("Alice")) {
+				set.remove(stu);// 因为CopyOnWriteArraySet是线程安全的集合，所以可以这样删除集合中的对象
+
+				// iterator.remove();//此处的出错还没解决！
+			}
+
+			else
+				System.out.print(
+						"id = " + stu.getId() + "  " + "name = " + stu.getName() + " " + iterator.hasNext() + "\r\n");
+
+		}
+		System.out.println(set.size());
+		System.out.println(set);
+
+		System.out.println(iterator.hasNext());
+		System.out.println(iterator.hasNext());
+		System.out.println(iterator.hasNext());
+
+	}
+
+	/*
+	 * 对CopyOnWriteArraySet的总结： 1.不允许重复 2.有迭代顺序,即插入的顺序
+	 * 3.线程同步的集合，始终拥有集合的那把锁,所以不会出现快速失败异常,但是线程同步的效率一般都不高
+	 */
+
+}

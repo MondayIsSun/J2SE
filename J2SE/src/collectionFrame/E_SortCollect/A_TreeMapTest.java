@@ -15,7 +15,5 @@ public class A_TreeMapTest {
 		strMap.put("4", "value_5");
 		
 		System.out.print(strMap+"\r\n");
-
 	}
-
 }

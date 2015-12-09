@@ -1,0 +1,98 @@
+package collectionFrame.A_SetT;
+
+import java.util.*;
+
+public class B_HashSetTest {
+	
+	/*
+	 * set不允许重复的处理方式:
+	 * 物理重复:对象是不可能在物理逻辑上重复的...
+	 * 逻辑重复:指的是如果两个对象equals()那么这两个对象就是逻辑重复的
+	 * 如果使用Object中继承下来的equals()方法进行比较那么这两个对象永远不可能逻辑上相等
+	 * 实际上Object身上原生的equals()方法是用到了对象的哈希值
+	 * 所以程序员常常去重写对象的equals()方法
+	 * 但是set集合中处理重复的方法不单单依靠equals()就可以解决,因为如果set集合单单按照equals()方法进行比较效率太低
+	 * 也就是说在我们平常的编程当中比较两个对象是否相等只要重写equals()方法就足够了
+	 * 但是如果对象是要放进set集合中的时候还需要去重写对象身上的hashCode()方法
+	 * 
+	 * 因为Java被创造出来的时候是这样处理set中的相等的:
+	 * 在HashSet中比较两个对象是否相等的方法是：先比较两个对象的hashCode()值是否相等，
+	 * 如果不相等就认为两个对象是不相等的，如果两个对象的hashCode相等就继续调用equals()方法进一步判断两个对象是否相等，
+	 * 如果equals()方法返回true认为两个对象相等，返回false认为两个对象不相等。
+	 * 
+	 * 因为默认对象的hash值肯定不相等的,所以如果要用set下面的容器进行处理对象数据时,要去重写equals()方法的同时还需要去重写hashCode()方法
+	 * 这时重写hashCode()方法的原则是---对象equals必 然有相等的哈希码，而哈希码相等的对象不一定equals---
+	 */
+
+	public static void main(String[] args) {
+		
+		A_student student_1=new A_student();//类名别和关键字重合！
+		student_1.setId(1);
+		student_1.setName("Alice");
+		
+		A_student student_2=new A_student();
+		student_2.setId(2);
+		student_2.setName("Blice");
+		
+		A_student student_3=new A_student();
+		student_3.setId(3);
+		student_3.setName("Clice");
+		
+		A_student student_4=new A_student();
+		student_4.setId(4);
+		student_4.setName("Dlice");
+		
+		A_student student_5=new A_student();
+		student_5.setId(1);
+		student_5.setName("Alice");
+		
+		//创建HashSet这一容器
+		Set<A_student> hashset=new HashSet<A_student>();
+		
+		//往容器里加入对象
+		hashset.add(student_1);
+		hashset.add(student_2);
+		hashset.add(student_3);
+		hashset.add(student_4);
+		hashset.add(student_5);
+		hashset.add(student_4);
+		System.out.println(hashset.size());
+		System.out.println(hashset);
+		
+		//定义该容器的迭代器
+		Iterator<A_student> iterator = hashset.iterator();//就是所创建容器的迭代器，所以迭代器直接指向容器里面的对象
+		
+		//验证自己的猜想
+		//System.out.println(iterator.hasNext());//iterator.hasNext()该方法可以接受一个参数用来初始化迭代器的指向
+		//student stud=(student)iterator.next();
+		//System.out.print("id = "+stud.getId()+"  "+"name = "+stud.getName()+" "+iterator.hasNext()+"\r\n");
+		
+		while(iterator.hasNext() == true){
+			
+			A_student stu=iterator.next();//因为用了泛型,所以此处无需进行强制类型转换
+			
+			//验证自己的猜想
+			//System.out.print("id = "+stu.getId()+"  "+"name = "+stu.getName()+" "+iterator.hasNext()+"\r\n");
+			
+			if(stu.getName().equals("Alice"))//字符串比较是否相等必须用equals()方法,String对象的很多方法JDK 重写过了,包括equals()方法
+				iterator.remove();
+			else
+				System.out.print("id = "+stu.getId()+"  "+"name = "+stu.getName()+" "+iterator.hasNext()+"\r\n");
+			
+		}
+		System.out.println(hashset.size());
+		System.out.println(hashset);
+		
+		System.out.println(iterator.hasNext());
+		System.out.println(iterator.hasNext());
+		System.out.println(iterator.hasNext());
+		
+		/*
+		 * 对HashSet的总结
+		 * 1.继承于Set接口，所以必然不重复
+		 * 2.无序(此处无序是指不同的JDK版本会有不同的顺序)
+		 * 3.非线程同步，所以会出现快速失败异常,建议直接用迭代器中的remove()进行删除操作
+		 */
+	}
+
+}

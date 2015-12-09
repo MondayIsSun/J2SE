@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;JavaSocket/src/socket_1&apos;&#x0D;&#x0A;- Original project: &apos;JavaSocket&apos;&#x0D;&#x0A;- Destination element: &apos;JavaSocket/src/socket_1&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Test02.java&#x0D;&#x0A;     Test03.java&#x0D;&#x0A;     Test01.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;socket_1" element1="/src&lt;{Test02.java" element2="/src&lt;{Test03.java" element3="/src&lt;{Test01.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1449640858847" units="3" version="1.0"/>
+</session>

@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.util.Scanner;
 
 class DeamonProcess implements Runnable {
+
 	@Override
 	public void run() {
 		System.out.println("进入守护线程" + Thread.currentThread().getName());
@@ -23,8 +24,7 @@ class DeamonProcess implements Runnable {
 		int cunt = 0;
 		while (cunt < 999) {
 			os.write(("\r\nword").getBytes());
-			System.out.println("守护线程" + Thread.currentThread().getName()
-					+ "向文件中写入了word" + cunt++);
+			System.out.println("守护线程" + Thread.currentThread().getName() + "向文件中写入了word" + cunt++);
 			Thread.sleep(1000);
 		}
 		os.close();
@@ -39,10 +39,10 @@ public class DeamonThread {
 		Thread t = new Thread(deamonProcess);
 		t.setDaemon(true);
 		t.start();
-		
+
 		Scanner sc = new Scanner(System.in);
 		sc.next();
-		
+
 		System.out.println("程序推出了主线程" + Thread.currentThread().getName());
 
 	}

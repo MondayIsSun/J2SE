@@ -23,8 +23,6 @@ public class F_ComparatorTest {
 		
 		System.out.println(strSet);
 		
-		
-		
 		List<D_cat> catlist = new ArrayList<D_cat>();//并不是所有的集合都可以接受比较器这一参数
 		catlist.add(new D_cat("加菲_3"));
 		catlist.add(new D_cat("加菲_2"));
@@ -39,9 +37,6 @@ public class F_ComparatorTest {
 				return cat_1.getName().compareTo(cat_2.getName());
 			}
 		});
-		
 		System.out.println(catlist);
-
 	}
-
 }
