@@ -1,0 +1,13 @@
+package com.mr.lmd;
+
+public class Base64 {
+
+	public static void main(String[] args) {
+
+	}
+
+	public static void jdkBase64() {
+
+	}
+
+}

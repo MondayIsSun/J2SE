@@ -1,0 +1,38 @@
+package com.mr.lmd;
+
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.KeyGenerator;
+import javax.crypto.Mac;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+
+public class MAC {
+
+	public static void main(String[] args) {
+
+	}
+
+	public static void jdkHMacMD5() {
+		KeyGenerator keyGenerator;
+		try {
+			// 生成密钥
+			keyGenerator = KeyGenerator.getInstance("HmacMD5");
+			SecretKey secretKey = keyGenerator.generateKey();
+			byte[] key = secretKey.getEncoded();
+
+			// 还原密钥
+			SecretKey restoreSecretKey = new SecretKeySpec(key, "HmacMD5");
+
+			Mac mac = Mac.getInstance(restoreSecretKey.getAlgorithm());
+			mac.init(restoreSecretKey);
+
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		} catch (InvalidKeyException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

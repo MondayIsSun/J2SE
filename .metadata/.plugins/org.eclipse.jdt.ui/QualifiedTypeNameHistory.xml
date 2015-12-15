@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="test.Test.ModuleArea"/>
 <fullyQualifiedTypeName name="test.Test.IcPlayerID"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.core.JsonProcessingException"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.concurrent.Semaphore"/>
 <fullyQualifiedTypeName name="java.util.concurrent.BlockingQueue"/>
@@ -32,4 +31,17 @@
 <fullyQualifiedTypeName name="java.util.concurrent.FutureTask"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ExecutionException"/>
 <fullyQualifiedTypeName name="java.util.function.Predicate"/>
+<fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Base64Encoder"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Base64"/>
+<fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Base64"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Hex"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.Digest"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.MD4Digest"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.MD5Digest"/>
+<fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Hex"/>
+<fullyQualifiedTypeName name="java.security.Security"/>
+<fullyQualifiedTypeName name="org.bouncycastle.jce.provider.BouncyCastleProvider"/>
+<fullyQualifiedTypeName name="java.security.MessageDigest"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.digest.DigestUtils"/>
 </qualifiedTypeNameHistroy>

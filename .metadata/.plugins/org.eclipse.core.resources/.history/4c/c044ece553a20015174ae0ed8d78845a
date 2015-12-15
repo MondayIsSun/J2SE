@@ -1,0 +1,39 @@
+package com.mr.lmd;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import org.apache.commons.codec.binary.Hex;
+
+public class MD {
+
+	private static final String srcStr = "security MD";
+
+	public static void main(String[] args) {
+		// jdkMD5();
+		jdkMD2();
+	}
+
+	public static void jdkMD5() {
+		try {
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			byte[] md5byte = md.digest(srcStr.getBytes());
+			System.out.println(Hex.encodeHexString(md5byte));
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void jdkMD2() {
+		try {
+			// 注意：并没有提供MD4的实现
+			MessageDigest md = MessageDigest.getInstance("MD2");
+			byte[] md5byte = md.digest(srcStr.getBytes());
+			System.out.println(Hex.encodeHexString(md5byte));
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+
+}

@@ -1,0 +1,27 @@
+package com.mr.lmd;
+
+//import sun.misc.BASE64Encoder;
+//import sun.misc.BASE64Decoder;
+
+public class Base64 {
+
+	private static String srcStr = "security base64";
+
+	public static void main(String[] args) {
+
+	}
+
+	// ÐèÒªjdk1.7
+	// public static void jdkBase64() {
+	// Base64Encoder encoder = new Base64Encoder();
+	// encoder.encode()
+	// }
+
+	public static void commonsCodesBase64() {
+		byte[] encodeBytes =  org.apache.commons.codec.binary.Base64.encodeBase64(srcStr.getBytes());
+		System.out.println("encode:"+new String(encodeBytes));
+		byte[] decodeBytes = org.apache.commons.codec.binary.Base64.decodeBase64(encodeBytes);
+		System.out.println("decode:"+new String(decodeBytes));
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.mr.lmd;
+
+public class MAC {
+
+	public static void main(String[] args) {
+
+	}
+
+}

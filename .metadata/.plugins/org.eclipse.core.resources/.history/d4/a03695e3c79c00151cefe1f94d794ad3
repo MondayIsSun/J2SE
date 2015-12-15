@@ -1,5 +1,0 @@
-package multi_thread.concurrence.future_task;
-
-public class PreLoaderUseFutureTask {
-
-}

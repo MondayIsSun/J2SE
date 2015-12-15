@@ -1,0 +1,17 @@
+package com.mr.lmd;
+
+import org.bouncycastle.util.encoders.Base64Encoder;
+
+public class Base64 {
+	
+	private static String srcStr = "";
+
+	public static void main(String[] args) {
+
+	}
+
+	public static void jdkBase64() {
+		Base64Encoder encoder = new Base64Encoder();
+	}
+
+}

@@ -1,5 +1,0 @@
-package multi_thread.concurrence.timer;
-
-public class ScheduledThreadPoolExecutorTest {
-
-}
